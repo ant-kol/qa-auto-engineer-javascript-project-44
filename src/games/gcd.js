@@ -3,9 +3,11 @@ import {getRandomNumber} from '../helper.js'
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGreatestCommonDivisor = (firstValue, secondValue) => {
+const getGreatestCommonDivisor = (num1, num2) => {
+  let firstValue = Math.abs(num1);
+  let secondValue = Math.abs(num2);
   while (secondValue !== 0) {
-    let temporaryValue = secondValue;
+    const temporaryValue = secondValue;
       secondValue = firstValue % secondValue;
       firstValue = temporaryValue;
     }
