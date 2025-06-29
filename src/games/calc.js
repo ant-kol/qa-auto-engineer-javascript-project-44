@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import {getRandomNumber} from '../helper.js'
+import {getRandomNumber} from '../helper.js';
 
 const mathOperations = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
