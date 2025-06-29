@@ -15,7 +15,7 @@ const calcMathOperation = (mathSymbol, firstValue, secondValue) => {
     return firstValue + secondValue;
   } else if (mathSymbol === '-') {
     return firstValue - secondValue;
-  } else {
+  } else if (mathSymbol === '*') {
     return firstValue * secondValue;
   }
 };
