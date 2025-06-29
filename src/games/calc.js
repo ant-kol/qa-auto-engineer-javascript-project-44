@@ -13,10 +13,10 @@ const getRandomMathOperations = (mathSymbols) => {
 const calcMathOperation = (mathSymbol, firstValue, secondValue) => {
   if (mathSymbol === '+') {
     return firstValue + secondValue
-  } 
+  }
   else if (mathSymbol === '-') {
     return firstValue - secondValue
-  } 
+  }
   else if (mathSymbol === '*') {
     return firstValue * secondValue
   }
