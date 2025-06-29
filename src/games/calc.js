@@ -5,7 +5,7 @@ const mathOperations = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRandomMathOperations = (mathSymbols) => {
-  const randomIndex = getRandomNumber(0, mathSymbols.length);
+  const randomIndex = getRandomNumber(0, mathSymbols.length - 1);
   const randomMathSymbol = mathSymbols[randomIndex];
   return randomMathSymbol;
 };
