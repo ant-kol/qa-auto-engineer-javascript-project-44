@@ -6,28 +6,25 @@ const description = 'What is the result of the expression?'
 
 const getRandomMathOperations = (mathSymbols) => {
   const randomIndex = getRandomNumber(0, mathSymbols.length - 1)
-  const randomMathSymbol = mathSymbols[randomIndex]
-  return randomMathSymbol
+  const mathSymbol = mathSymbols[randomIndex]
+  return mathSymbol
 }
 
-const calcMathOperation = (mathSymbol, firstValue, secondValue) => {
-  if (mathSymbol === '+') {
-    return firstValue + secondValue
-  }
-  else if (mathSymbol === '-') {
-    return firstValue - secondValue
-  }
-  else if (mathSymbol === '*') {
-    return firstValue * secondValue
+const calcMathOperation = (symbol, firstValue, secondValue) => {
+  switch (symbol) {
+    case '+': return firstValue + secondValue
+    case '-': return firstValue - secondValue
+    case '*': return firstValue * secondValue
+    default: return null
   }
 }
 
 const getQuestionAnswer = () => {
-  const randomMathSymbol = getRandomMathOperations(mathOperations)
+  const mathSymbol = getRandomMathOperations(mathOperations)
   const firstNum = getRandomNumber(0, 10)
   const secondNum = getRandomNumber(0, 10)
-  const question = `${firstNum} ${randomMathSymbol} ${secondNum}`
-  const correctAnswer = String(calcMathOperation(randomMathSymbol, firstNum, secondNum))
+  const question = `${firstNum} ${mathSymbol} ${secondNum}`
+  const correctAnswer = String(calcMathOperation(mathSymbol, firstNum, secondNum))
   return [question, correctAnswer]
 }
 
