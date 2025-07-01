@@ -3,14 +3,15 @@ import { getRandomNumber } from '../helper.js'
 
 const description = 'What number is missing in the progression?'
 
-const getArithmeticProgression = () => {
-  const startProgressionElement = getRandomNumber(0, 50)
-  const progressionLength = getRandomNumber(5, 10)
-  const stepProgression = getRandomNumber(2, 10)
+const getArithmeticProgression = (
+  progressionStart = getRandomNumber(0, 50),
+  progressionLength = getRandomNumber(5, 10),
+  progressionStep = getRandomNumber(2, 10)
+) => {
   const arithmeticProgression = []
 
   for (let i = 0; i < progressionLength; i++) {
-    const currentElement = startProgressionElement + i * stepProgression
+    const currentElement = progressionStart + i * progressionStep
     arithmeticProgression.push(currentElement)
   }
   return arithmeticProgression
